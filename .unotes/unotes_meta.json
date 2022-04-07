@@ -1,0 +1,40 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "__pycache__": {
+      "name": "__pycache__",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "alembic": {
+      "name": "alembic",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "app": {
+      "name": "app",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "venv": {
+      "name": "venv",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "vimc--": {
+      "name": "vimc--",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {
+    "pyNotes": 0,
+    "ds&algo": 1
+  }
+}
