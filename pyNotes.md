@@ -87,3 +87,39 @@ in _(venv)_ shows all the dependencies & packages needed for our git repository 
 >`$`_pip freeze > requirements.txt_
 __
 \\\\ installing requirements.txt for a git user = `$ pip install -r requirements.txt`\\\\
+>__
+>**2. Create Git Repository** then follow with git commands:
+> - `$` _git init_
+> - `$` _git add --all_
+> - `$` _git commit -m_
+> `$` _git branch -M main_
+> - `$` _git remote add origin </url/>
+> `$` _git push -u origin main _
+____
+
+### Heroku - Deploy, Manage & Scale Apps
+>`$ heroku login`
+
+**1.** Deploy the app -
+`$ heroku create <appname>`
+_app names are global, ie. unique name online_
+// creates heroku app on dashboard + git remote
+__
+**2.** Push app to main branch -
+`$ git push heroku main`
+// application deployed to heroku √
+creates application /URL/
+__
+**3.** Define a Procfile
+ie. `Command for heroku to start our app`
+_FASTAPI app instance is located in main.py, we have to let **heroku** know -> create file for heroku to enable deployment command_
+development <> production
+__
+* Adjusting host IP = respond to any IP request
+* PORT Flag = what port do we run the app on (heroku auto-generates port), we need to accept whatever Port it will be
+
+__
+**4.** Push out changes to git after creating Procfile
+`$ git add --all`
+`$ git commit -m ""`
+`$ git push origin main`

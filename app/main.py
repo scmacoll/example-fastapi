@@ -11,7 +11,7 @@ from .config import settings
 app = FastAPI()
 
 # the domains that can talk to our API
-origins=[*]
+origins=["*"]
 
 # allow specific domains, headers, methods to interact with our API
 app.add_middleware(
