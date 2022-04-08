@@ -21,8 +21,10 @@ def upgrade():
     op.create_table('votes',
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('post_id', sa.Integer(), nullable=False),
-    sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ondelete='CASCADE'),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(
+        ['post_id'], ['posts.id'], ondelete='CASCADE'),
+    sa.ForeignKeyConstraint(
+        ['user_id'], ['users.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('user_id', 'post_id')
     )
     # ### end Alembic commands ###
