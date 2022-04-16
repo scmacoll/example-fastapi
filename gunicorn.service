@@ -1,0 +1,20 @@
+# standard procedure for creating a service
+[Unit]
+Description=demo fastapi application
+# start service after.. (we need network servers running before we start API)
+After=network.target
+
+[Service]
+# non-root user accesing the service (@ ubuntu)
+User=stufastapi
+Group=stufastapi
+WorkingDirectory=/home/stufastapi/app/src
+# point virtual environment to venv/bin folder for virtualenv to run through the script
+Environment="PATH=/home/stufastapi/app/venv/bin"
+EnvironmentFile=/home/stufastapi/.env
+# specify the directory & command to run that starts the server
+ExecStart=/home/stufastapi/app/venv/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
+
+[Install]
+# default config
+WantedBy=multi-user.target 
